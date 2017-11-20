@@ -1,13 +1,13 @@
 # Reproducible Research - Peer-graded Assignment: Course Project 1
 This is a solution of the Peer-graded Assignment: Course Project 1 as part of the Reproducible Research Coursera course. 
 
-###Set up the environment
+### Set up the environment
 
 ```r
 library("lattice")
 setwd('/Users/petrpodrouzek/Documents/coursera/ReproducibleResearch/Week2/RepData_PeerAssessment1')
 ```
-###Loading and preprocessing the data
+### Loading and preprocessing the data
 Load the data and process/transform the data (if necessary) into a format suitable for your analysis.
 
 ```r
@@ -29,7 +29,7 @@ head(df, 10)
 ## 9     NA 2012-10-01       40
 ## 10    NA 2012-10-01       45
 ```
-###What is mean total number of steps taken per day?
+### What is mean total number of steps taken per day?
 Calculate the total number of steps taken per day
 
 ```r
@@ -80,7 +80,7 @@ median(dfAgg$steps)
 ```
 ## [1] NA
 ```
-###What is the average daily activity pattern?
+### What is the average daily activity pattern?
 Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 ```r
@@ -98,7 +98,7 @@ head(df5MinMean[order(-df5MinMean$Mean),],1)$Interval
 ```
 ## [1] 835
 ```
-###Imputing missing values
+### Imputing missing values
 Calculate and report the total number of missing values in the dataset 
 
 ```r
@@ -180,7 +180,7 @@ median(dfImputeAgg$steps)
 ```
 ## [1] 10766.19
 ```
-###Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 Create a new factor variable in the dataset with two levels "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 ```r
